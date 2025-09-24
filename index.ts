@@ -1,9 +1,12 @@
-function hello (name: string): string {
-  return `Hello, ${name}!`
-}
+// function hello (name: string): string {
+//   return `Hello, ${name}!`
+// }
 
-console.log(hello('World'))
-console.log(hello('TypeScript'))
-console.log(hello('Nassi'))
-console.log(hello('123'))
-console.log(hello(123))
+function logMessage(message: string): void {
+  console.log(`hello message:${message}`);
+}
+logMessage('Hello, World!');
+logMessage('Hello, Nassim!');
+
+
+//  console.log(hello('Nassim'));    

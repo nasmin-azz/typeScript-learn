@@ -1,10 +1,11 @@
-function hello(name) {
-    return `Hello, ${name}!`;
+// function hello (name: string): string {
+//   return `Hello, ${name}!`
+// }
+function logMessage(message) {
+    console.log(`hello message:${message}`);
 }
-console.log(hello('World'));
-console.log(hello('TypeScript'));
-console.log(hello('Nassi'));
-console.log(hello('123'));
-console.log(hello(123));
+logMessage('Hello, World!');
+logMessage('Hello, Nassim!');
 export {};
+//  console.log(hello('Nassim'));    
 //# sourceMappingURL=index.js.map
