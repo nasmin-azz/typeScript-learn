@@ -1,17 +1,15 @@
-// function hello (name: string): string {
-//   return `Hello, ${name}!`
-// }
-// function logMessage(message: string): void {
-//   console.log(`hello message:${message}`);
-// }
-// function personInfo(name: string, age?: number): string {
-//     return age ? `${name} is ${age} years old.` : `${name}'s age is unknown.`;
-// }
-function greet(name, greeting = "Hello") {
-    return `${greeting}, ${name}!`;
+function logMessage(message) {
+    console.log(message);
 }
-console.log(greet("Alice")); // Output: Hello, Alice!
-console.log(greet("Bob", "Hi")); // Output: Hi, Bob!    
-console.log(greet("Charlie", undefined)); // Output: Hello, Charlie!
+console.log(logMessage);
+// never
+function feroError(message) {
+    throw new Error(message);
+}
+function loop(message) {
+    while (true) {
+        console.log(message);
+    }
+}
 export {};
 //# sourceMappingURL=index.js.map
