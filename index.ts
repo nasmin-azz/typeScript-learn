@@ -5,16 +5,16 @@
 // function logMessage(message: string): void {
 //   console.log(`hello message:${message}`);
 // }
-// logMessage('Hello, World!');
-// logMessage('Hello, Nassim!');
+
+// function personInfo(name: string, age?: number): string {
+//     return age ? `${name} is ${age} years old.` : `${name}'s age is unknown.`;
+// }
 
 
-//  console.log(hello('Nassim'));    
-
-function personInfo(name: string, age?: number): string {
-    return age ? `${name} is ${age} years old.` : `${name}'s age is unknown.`;
+function greet (name: string, greeting: string = "Hello"): string {
+  return `${greeting}, ${name}!`
 }
-console.log(personInfo('Nassim', 30)); // Nassim is 30 years old.
-console.log(personInfo('Alice'));    // Alice's age is unknown.
-console.log(personInfo('Bob', undefined)); // Bob's age is unknown.
-console.log(personInfo('Charlie', 25)); // Charlie is 25 years old.
+
+console.log(greet("Alice")); // Output: Hello, Alice!
+console.log(greet("Bob", "Hi")); // Output: Hi, Bob!    
+console.log(greet("Charlie", undefined)); // Output: Hello, Charlie!
