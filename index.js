@@ -1,7 +1,7 @@
-// function combine(a:number|string , b:number|string){
-// return a+b
-// }
+function combine(a, b) {
+    return a + b;
+}
+console.log(combine(10, 80));
+console.log(combine('nasi', 'azizi'));
 export {};
-// console.log(combine(10,70))
-// console.log(combine('hh','fty'))
 //# sourceMappingURL=index.js.map
