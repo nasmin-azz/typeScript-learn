@@ -1,15 +1,7 @@
-function logMessage(message) {
-    console.log(message);
-}
-console.log(logMessage);
-// never
-function feroError(message) {
-    throw new Error(message);
-}
-function loop(message) {
-    while (true) {
-        console.log(message);
-    }
-}
+// function combine(a:number|string , b:number|string){
+// return a+b
+// }
 export {};
+// console.log(combine(10,70))
+// console.log(combine('hh','fty'))
 //# sourceMappingURL=index.js.map

@@ -1,14 +1,10 @@
-function logMessage(message:string):void{
-    console.log(message)
-}
-console.log(logMessage)
+// function combine(a:number|string , b:number|string){
+// return a+b
+// }
 
-// never
-function feroError(message:string):never{
-    throw new Error(message)
-}
-function loop(message:string):never{
-    while(true){
-        console.log(message)
-    }
-}
+// console.log(combine(10,70))
+// console.log(combine('hh','fty'))
+
+
+
+
