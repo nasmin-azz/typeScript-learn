@@ -1,9 +1,16 @@
-
-function combine(a:number , b:number) :number
-function combine(a:string , b:string) :string
-function combine(a:any,b:any):any {
-    return a+b
+enum Status{
+    Pending =' در انتظار ',
+    Inprogress =' درحال انجام',
+    Done =' انجام شده'
 }
 
-console.log(combine(10,80))
-console.log(combine('nasi','azizi'))
+let tasks :Array<{id:number , title:string , status:Status}> =[]
+
+function addTask(title:string,status:Status):void{
+const newTask = {id:tasks.length+1,title,status}
+tasks.push(newTask)
+console.log(`Task ${title} added`)
+}
+
+
+addTask('New TAsk1',Status.Pending)
