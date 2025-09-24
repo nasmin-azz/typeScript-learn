@@ -1,0 +1,16 @@
+var myName = 'NAstaran Azizi';
+var score = 15;
+var isProgrammer = true;
+var numbers = [10, 500, 7000];
+var cities = ['Tehran', 'Shiraz', 'Kermanshah'];
+var person = ['Amir', 40];
+var info = { name: 'tara', age: 27 };
+var randomValue;
+randomValue = 'Hello';
+console.log(randomValue);
+randomValue = 44;
+console.log(randomValue);
+var text = 'Hello';
+text = 55;
+var data;
+console.log(typeof (data));
