@@ -1,30 +1,31 @@
-let myName:string='NAstaran Azizi'
+enum Direction{
+    Up, //0
+    Down,//1
+    Left,//2
+    Right//3
+}
 
-let score:number=15
-
-let isProgrammer : boolean=true
-
-let numbers:number[]=[10,500,7000]
-
-let cities:Array<string> =['Tehran','Shiraz','Kermanshah']
-
-let person:[string,number]=['Amir',40]
-
-let info:{name:string,age:number}={name:'tara',age:27}
-
-let randomValue:any
-
-randomValue='Hello'
-console.log(randomValue)
+let moveDirection : Direction=Direction.Up
+console.log(moveDirection)
+console.log(typeof(moveDirection))
 
 
-randomValue=44
-console.log(randomValue)
+enum Status{
+    Active= 1,
+    Inactive= -1,
+    Pending=0
+}
 
-// wrong
-let text='Hello'
-text=55
+let userStatus=Status.Inactive
 
-// wrong
-let data
-console.log(typeof(data))
+console.log(userStatus)
+
+
+enum color{
+    Red="Red",
+    Green="Green",
+    Blue="Blue"
+}   
+
+let myColor:color=color.Red
+console.log(myColor)
