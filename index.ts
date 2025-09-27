@@ -13,7 +13,7 @@ class User{
     console.log(`Name is:${this.name} status is:${this.status}`)
   }
 
-  public updateStatus(newStatus:string){
+  public updateStatus(newStatus:string){ss
     this.status=newStatus
   }
 

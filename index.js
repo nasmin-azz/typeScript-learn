@@ -8,6 +8,7 @@ class User {
         console.log(`Name is:${this.name} status is:${this.status}`);
     }
     updateStatus(newStatus) {
+        ss;
         this.status = newStatus;
     }
     getEmail() {
