@@ -13,8 +13,29 @@ namespace Products{
 
   ]
 
-  function listProduct():string[]{
+  export function listProduct():string[]{
     return products.map(item =>`${item.name} - ${item.price}`)
   }
-  console.log(listProduct())
+  // console.log(listProduct())
 }
+
+namespace Customers{
+  interface Customer{
+    readonly id:number
+    name:string
+    email:string
+  }
+
+  const people:Customer[]=[
+ {id:1,name:'LapTop1',email:'nasiAxixi@gmail.com'},
+    {id:2,name:'LapTop2',email:'nasiAxixi@gmail.com'},  ]
+    export function showPeople(){
+      return people.map(item=>`${item.name}-${item.email}`)
+    }
+// console.log(showPeople())
+  }
+
+
+
+  console.log(Products.listProduct())
+  console.log(Customers.showPeople())

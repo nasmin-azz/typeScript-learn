@@ -9,7 +9,22 @@ var Products;
     function listProduct() {
         return products.map(item => `${item.name} - ${item.price}`);
     }
-    console.log(listProduct());
+    Products.listProduct = listProduct;
+    // console.log(listProduct())
 })(Products || (Products = {}));
+var Customers;
+(function (Customers) {
+    const people = [
+        { id: 1, name: 'LapTop1', email: 'nasiAxixi@gmail.com' },
+        { id: 2, name: 'LapTop2', email: 'nasiAxixi@gmail.com' },
+    ];
+    function showPeople() {
+        return people.map(item => `${item.name}-${item.email}`);
+    }
+    Customers.showPeople = showPeople;
+    // console.log(showPeople())
+})(Customers || (Customers = {}));
+console.log(Products.listProduct());
+console.log(Customers.showPeople());
 export {};
 //# sourceMappingURL=index.js.map
