@@ -1,43 +1,8 @@
-class User{
-  public name:string
-  private email:string
-  protected status:string
-
-  constructor(name:string,email:string,status:string){
-    this.name=name
-    this.email=email
-    this.status=status
-  }
-
-  public getUSerInfo(){
-    console.log(`Name is:${this.name} status is:${this.status}`)
-  }
-
-  public updateStatus(newStatus:string){ss
-    this.status=newStatus
-  }
-
-  private getEmail(){
-    return this.email
-  }
+function showFirst(arr:string[]) : string
+function showFirst(arr:number[]):number
+function showFirst(arr:any[]):any{
+  return arr[0]
 }
 
-class Admin extends User{
-  constructor(name:string,email:string,status:boolean ){
-  super(name,email,status)
-  }
-  public getAdminInfo(){
-    console.log(`${this.name} - ${this.status} `)
-  }
-
-  public getEmailAccess(){
-    console.log(this.getEmail())
-  }
-}
-
-const user=new User('Saeed','Saeed@gmail.com','active')
-user.getUSerInfo()
-console.log(user.name)
-console.log(user.email)
-user.updateStatus('Inactive')
-user.getUSerInfo()
+console.log(showFirst(['Amin','Nima','Sima']))
+console.log(showFirst([200,500,8000]))
