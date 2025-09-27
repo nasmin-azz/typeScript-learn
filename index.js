@@ -1,15 +1,16 @@
-var Status;
-(function (Status) {
-    Status["Pending"] = " \u062F\u0631 \u0627\u0646\u062A\u0638\u0627\u0631 ";
-    Status["Inprogress"] = " \u062F\u0631\u062D\u0627\u0644 \u0627\u0646\u062C\u0627\u0645";
-    Status["Done"] = " \u0627\u0646\u062C\u0627\u0645 \u0634\u062F\u0647";
-})(Status || (Status = {}));
-let tasks = [];
-function addTask(title, status) {
-    const newTask = { id: tasks.length + 1, title, status };
-    tasks.push(newTask);
-    console.log(`Task ${title} added`);
+const games = [
+    { id: 1, title: "Elden Ring", genre: "RPG", rating: 9.5, realeaseDate: 2022, multiPlayer: true },
+    { id: 2, title: "FIFA 25", genre: "Sports", rating: 8.0, realeaseDate: 2025, multiPlayer: true },
+    { id: 3, title: "The Witcher 3", genre: "RPG", rating: 9.8, realeaseDate: 2015 },
+    { id: 4, title: "God of War", genre: "Action", rating: 9.7, realeaseDate: 2018 }
+];
+function filterbyGenre(games, genre) {
+    return games.filter(item => item.genre == genre);
 }
-addTask('New TAsk1', Status.Pending);
+console.log(filterbyGenre(games, 'RPG'));
+function multiPlayerFunc(games) {
+    return games.filter(item => item.multiPlayer);
+}
+console.log(multiPlayerFunc(games));
 export {};
 //# sourceMappingURL=index.js.map
