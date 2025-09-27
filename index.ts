@@ -1,34 +1,43 @@
-class Person2{
-  name:string
-  age:number
+class User{
+  public name:string
+  private email:string
+  protected status:string
 
-  constructor (name:string,age:number){
+  constructor(name:string,email:string,status:string){
     this.name=name
-    this.age=age
-  }
-introduce():void{
-  console.log(`Hi my name is ${this.name} and I am ${this.age} years old`)
-}
-}
-
-const Person =new Person2('Ali',25)
-Person.introduce()
-
-class Car{
-  brand:string
-  model:string
-  year:number
-
-  constructor(brand:string,model:string,year:number){
-    this.brand=brand
-    this.model=model
-    this.year=year
-  }
-  getInfo(){
-    console.log(`${this.brand} - ${this.model}-${this.year}`)
+    this.email=email
+    this.status=status
   }
 
+  public getUSerInfo(){
+    console.log(`Name is:${this.name} status is:${this.status}`)
+  }
+
+  public updateStatus(newStatus:string){
+    this.status=newStatus
+  }
+
+  private getEmail(){
+    return this.email
+  }
 }
 
-const cars=new Car('mostang','japan',1995)
-cars.getInfo()
+class Admin extends User{
+  constructor(name:string,email:string,status:boolean ){
+  super(name,email,status)
+  }
+  public getAdminInfo(){
+    console.log(`${this.name} - ${this.status} `)
+  }
+
+  public getEmailAccess(){
+    console.log(this.getEmail())
+  }
+}
+
+const user=new User('Saeed','Saeed@gmail.com','active')
+user.getUSerInfo()
+console.log(user.name)
+console.log(user.email)
+user.updateStatus('Inactive')
+user.getUSerInfo()

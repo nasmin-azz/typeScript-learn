@@ -1,25 +1,35 @@
-class Person2 {
-    constructor(name, age) {
+class User {
+    constructor(name, email, status) {
         this.name = name;
-        this.age = age;
+        this.email = email;
+        this.status = status;
     }
-    introduce() {
-        console.log(`Hi my name is ${this.name} and I am ${this.age} years old`);
+    getUSerInfo() {
+        console.log(`Name is:${this.name} status is:${this.status}`);
     }
-}
-const Person = new Person2('Ali', 25);
-Person.introduce();
-class Car {
-    constructor(brand, model, year) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
+    updateStatus(newStatus) {
+        this.status = newStatus;
     }
-    getInfo() {
-        console.log(`${this.brand} - ${this.model}-${this.year}`);
+    getEmail() {
+        return this.email;
     }
 }
-const cars = new Car('mostang', 'japan', 1995);
-cars.getInfo();
+class Admin extends User {
+    constructor(name, email, status) {
+        super(name, email, status);
+    }
+    getAdminInfo() {
+        console.log(`${this.name} - ${this.status} `);
+    }
+    getEmailAccess() {
+        console.log(this.getEmail());
+    }
+}
+const user = new User('Saeed', 'Saeed@gmail.com', 'active');
+user.getUSerInfo();
+console.log(user.name);
+console.log(user.email);
+user.updateStatus('Inactive');
+user.getUSerInfo();
 export {};
 //# sourceMappingURL=index.js.map
