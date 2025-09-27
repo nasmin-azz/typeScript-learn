@@ -1,28 +1,34 @@
-interface Game{
-  readonly  id:number,
-    title:string,
-    genre:string,
-    rating:number,
-    realeaseDate:number,
-    multiPlayer ?:boolean
+class Person2{
+  name:string
+  age:number
+
+  constructor (name:string,age:number){
+    this.name=name
+    this.age=age
+  }
+introduce():void{
+  console.log(`Hi my name is ${this.name} and I am ${this.age} years old`)
+}
 }
 
-const games:Game[]=[
-  { id: 1, title: "Elden Ring", genre: "RPG", rating: 9.5, realeaseDate: 2022, multiPlayer: true },
-  { id: 2, title: "FIFA 25", genre: "Sports", rating: 8.0, realeaseDate: 2025, multiPlayer: true },
-  { id: 3, title: "The Witcher 3", genre: "RPG", rating: 9.8, realeaseDate: 2015 },
-  { id: 4, title: "God of War", genre: "Action", rating: 9.7, realeaseDate: 2018 }
-]
+const Person =new Person2('Ali',25)
+Person.introduce()
 
+class Car{
+  brand:string
+  model:string
+  year:number
 
-function filterbyGenre(games:Game[],genre:string){
-  return games.filter(item =>item.genre==genre)
+  constructor(brand:string,model:string,year:number){
+    this.brand=brand
+    this.model=model
+    this.year=year
+  }
+  getInfo(){
+    console.log(`${this.brand} - ${this.model}-${this.year}`)
+  }
+
 }
-console.log(filterbyGenre(games, 'RPG'))
 
-function multiPlayerFunc(games:Game[]){
-  return games.filter(item=>item.multiPlayer)
-}
-
-
-console.log(multiPlayerFunc(games))
+const cars=new Car('mostang','japan',1995)
+cars.getInfo()
